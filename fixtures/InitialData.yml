@@ -1,0 +1,23 @@
+App\Entity\Stat:
+  strength:
+    name: "Strength"
+    description: ""
+  dexterity:
+    name: "Dexterity"
+  constitution:
+    name: "Constitution"
+  willpower:
+    name: "Willpower"
+  intelligence:
+    name: "Intelligence"
+App\Entity\Role:
+  warrior:
+    name: "Warrior"
+  archer:
+    name: "Archer"
+
+App\Entity\User:
+  fixture:
+    username: dodo
+    password: "<hashPassword('test')>"
+

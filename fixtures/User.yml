@@ -1,4 +1,0 @@
-App\Entity\User:
-  fixture:
-    username: dodo
-    password: "<hashPassword('test')>"

@@ -14,9 +14,17 @@
         {% endblock %}
     </head>
     <body>
-    {% dump(app) %}
         {% block body %}
             {% block menu %}
+                <ul>
+                    <li><a>About</a></li>
+                    {% if app.user is not null %}
+                        <li><a>Hero</a></li>
+                        <li><a href="{{ path('app_logout') }}">Logout</a></li>
+                    {% else %}
+                        <li><a href="{{ path('app_login') }}">Login</a></li>
+                    {% endif %}
+                </ul>
             {%endblock %}
 
             {% block content %}
