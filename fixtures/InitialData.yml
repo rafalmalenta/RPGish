@@ -15,7 +15,6 @@ App\Entity\Role:
     name: "Warrior"
   archer:
     name: "Archer"
-
 App\Entity\User:
   fixture:
     username: dodo

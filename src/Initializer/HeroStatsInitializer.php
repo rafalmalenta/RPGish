@@ -4,7 +4,6 @@ namespace App\Initializer;
 
 use App\Entity\Hero;
 use App\Entity\HeroStat;
-use App\Entity\Stat;
 use App\Repository\StatRepository;
 
 class HeroStatsInitializer
@@ -14,7 +13,7 @@ class HeroStatsInitializer
     {
     }
 
-    public function initialize(Hero $hero): Hero
+    public function initialize(Hero $hero): void
     {
         $stats = $this->statRepository->findAll();
         foreach ($stats as $stat){
@@ -23,7 +22,5 @@ class HeroStatsInitializer
             $heroStat->setValue($this::INITIAL_STAT_VALUE);
             $hero->addHeroStat($heroStat);
         }
-
-        return $hero;
     }
 }

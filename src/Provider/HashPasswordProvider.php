@@ -4,7 +4,6 @@ namespace App\Provider;
 
 use App\Entity\User;
 use Faker\Provider\Base as BaseProvider;
-use Symfony\Component\PasswordHasher\PasswordHasherInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class HashPasswordProvider extends BaseProvider
 {

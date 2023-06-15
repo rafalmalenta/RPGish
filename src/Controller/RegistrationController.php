@@ -30,8 +30,7 @@ class RegistrationController extends AbstractController
             );
 
             $hero = $user->getHero();
-            $hero = $heroStatsInitializer->initialize($hero);
-            $user->setHero($hero);
+            $heroStatsInitializer->initialize($hero);
 
             $entityManager->persist($user);
             $entityManager->flush();
