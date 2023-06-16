@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HeroController extends AbstractController
 {
-    #[Route('/hero', name: 'app_hero')]
+    #[Route('/game/hero', name: 'app_hero')]
     public function index(): Response
     {
         $hero = $this->getUser()->getHero();

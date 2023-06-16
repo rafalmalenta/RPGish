@@ -10,6 +10,9 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: HeroRepository::class)]
 class Hero
 {
+    public const HERO_STATS = [
+        'strength'=>"Strength",
+    ];
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -88,6 +91,18 @@ class Hero
         }
 
         return $this;
+    }
+
+    public function getStatByName(string $name): ?HeroStat
+    {
+        /** @var HeroStat $stat */
+        foreach ($this->heroStats as $stat){
+            $statName = $stat->getStat()->getName();
+            if ($statName === $name){
+                return $stat;
+            }
+        }
+        return null;
     }
 
 }

@@ -10,6 +10,8 @@ App\Entity\Stat:
     name: "Willpower"
   intelligence:
     name: "Intelligence"
+  unused:
+    name: "Unused"
 App\Entity\Role:
   warrior:
     name: "Warrior"

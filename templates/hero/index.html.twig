@@ -1,15 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello HeroController!{% endblock %}
-
+{% set x = constant('App\\Entity\\Hero::HERO_STATS') %}
 {% block content %}
-{#<style>#}
-{#    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }#}
-{#    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }#}
-{#</style>#}
-
-<div class="example-wrapper">
-    {{ hero.class.name }}
-    {{ hero.heroStats[0].stat.name }}
-</div>
+    <div class="row">
+    <div class="col-12 col-lg-6">
+{#        TODO gear information#}
+    </div>
+    <div class="col-12 col-lg-6">
+{#        TODO stats information#}
+    </div>
+    </div>
 {% endblock %}
